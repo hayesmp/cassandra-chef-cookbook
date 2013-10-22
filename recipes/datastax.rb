@@ -69,6 +69,7 @@ when "debian"
     package "cassandra" do
       action :install
       version node[:cassandra][:version]
+      options("--force-yes")
     end
   end
 
