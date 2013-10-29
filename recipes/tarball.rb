@@ -49,6 +49,7 @@ tarball_dir = File.join(td, "apache-cassandra-#{node.cassandra.version}")
 
 remote_file(tmp) do
   source node.cassandra.tarball.url
+  puts node.cassandra.tarball.url
 
   not_if "which cassandra"
 end
